@@ -20,14 +20,20 @@ The bot function is part of RNA3210d/RPi-TELEBOT.
 
 Commands:
 
-help - List of commands
-cpu - Get CPU info (lscpu)
-usb - See connected USB devices (lsusb)
-hi - To check if online
-time - Returns time
-date - Returns date
-temp - CPU Temperature
-repoupdate - update repositories (sudo apt-get update)
-upgrade - upgrade packages (sudo apt-get upgrade -y)
-shutdown - Shutdown RPi (sudo shutdown -h now)
-reboot - Reboot RPi (sudo reboot)
+- help - get a List of all commands
+- cpu - Get CPU info (lscpu) + CPU temperature
+- usb - See connected USB devices (lsusb)
+- hi - To check if online
+- uhrzeit - get time
+- datum - get date
+- repoupdate - update repositories (sudo apt-get update)
+- upgrade - upgrade packages (sudo apt-get upgrade -y)
+- shutdown - Shutdown RPi (sudo shutdown -h now)
+- reboot - Reboot RPi (sudo reboot)
+- heizung aus - Turn off heater
+- heizung ein - Turn on heater
+- heizung status - get heater status, temperature and fueltank level
+- temperatur - get room temperature, humandity and pressure
+- stelle temperatur - system ask you for setting temperature
+- protokoll - send chat protocol via E-mail
+- statistik - send a datalog via E-mail
