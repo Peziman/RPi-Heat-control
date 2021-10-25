@@ -54,21 +54,21 @@ def handle(msg):
         elif command == '/hi':
             bot.sendMessage (chat_id, str("BLEEP..BLOP.., Hallo ike bins... die Werkstatt Heizung!"))
     
-        elif command == '/time':
+        elif command == '/uhrzeit':
             bot.sendMessage(chat_id, str("Time: ") + str(now.hour) + str(":") + str(now.minute) + str(":") + str(now.second))
     
-        elif command == '/date':
+        elif command == '/datum':
             bot.sendMessage(chat_id, str("Date: ") + str(now.day) + str("/") + str(now.month) + str("/") + str(now.year))
     
-        elif command == '/Heizung Ein':
+        elif command == '/heizung ein':
             bot.sendMessage(chat_id, str("Heizung wird Automaik Betrieb geschaltet!"))
             hz_auto = True
         
-        elif command == '/Heizung Aus':
+        elif command == '/heizung aus':
             bot.sendMessage(chat_id, str("Heizung wird abgeschaltet"))
             hz_auto = False
         
-        elif command == '/Heizung Status':
+        elif command == '/heizung status':
             if hz_error == True:
                 bot.sendMessage(chat_id, str("Bei der Heizung ist eine Störung aufgetreten!"))
             else:
@@ -83,10 +83,10 @@ def handle(msg):
             bot.sendMessage(chat_id, str("Die Temperatur ist auf ") + str(soll_temp) + str("C° eingestellt."))
             bot.sendMessage(chat_id, str("Im Tank befinden sich ") + str(tank_level) + str("l Diesel."))
          
-        elif command == '/Temperatur':
+        elif command == '/temperatur':
             bot.sendMessage(chat_id, str("In der Werkstatt hat es momentan ") + str(room_temp) + str("C°") + str("bei einer Luftfeuchte von ") + str(room_hum) + str("%. ") + str("Der Luftdruck liegt bei ") + str(room_pres) + str("mBar."))
         
-        elif command == '/stelle Temperatur':
+        elif command == '/stelle temperatur':
             if wait_for_temp == False:
                 bot.sendMessage(chat_id, str("Die Temperatur ist auf ") + str(soll_temp) + str("C° eingestellt."))
                 bot.sendMessage(chat_id, str("Auf welche Soll-Temperatur soll eingestellt werden?"))
