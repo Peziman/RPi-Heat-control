@@ -7,6 +7,7 @@
 import datetime 
 import telepot  
 import subprocess
+import Heat_control
 from telepot.loop import MessageLoop
 from time import sleep      
 from gpiozero import CPUTemperature
@@ -135,9 +136,8 @@ def handle(msg):
 bot = telepot.Bot('Enter your Telegram bot API token here')
 print (bot.getMe())
 
-# Start listening to the telegram bot and whenever a message is  received, the handle function will be called.
-MessageLoop(bot, handle).run_as_thread()
-print ('GPIOTEL 2.00 at your service...')
+def start_bot:
+    # Start listening to the telegram bot and whenever a message is  received, the handle function will be called.
+    MessageLoop(bot, handle).run_as_thread()
+    print ('GPIOTEL 2.00 at your service...')
 
-while 1:
-    sleep(10)
